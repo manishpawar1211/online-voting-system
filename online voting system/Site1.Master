@@ -1,0 +1,113 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" Codefile="Site1.master.cs" Inherits="online_voting_system.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="datatable/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="fontawesome/css/all.css" rel="stylesheet" />
+
+    <script src="bootstrap/js/jquery-3.3.1.slim.min.js"></script>
+    <script src="bootstrap/js/popper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <style>
+        .footerlinks {
+            color: #ffffff;
+            text-decoration: none !important;
+        }
+
+            .footerlinks:hover {
+                color: #ffd800;
+            }
+
+        #footer1 {
+            background: #762b00;
+        }
+
+        #footer2 {
+            background: #531f00;
+        }
+    </style>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="#">
+                    <img src="images/home.png" width="30" height="30" />
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="Home.aspx">Home</a>
+                        </li>
+                        <li class="nav-iyem active">
+                            <a class="nav-link" href="#">About us</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="#">Terms</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton10" runat="server" OnClick="LinkButton1_Click">User Login</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton14" runat="server" OnClick="LinkButton2_Click">Sign Up</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton" runat="server" Visible="False" OnClick="LinkButton_Click">Logout</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton2" runat="server" Visible="False">Hello user</asp:LinkButton>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <footer>
+            <div id="footer1" class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                        <p>
+                          <asp:LinkButton class="footerlinks" ID="LinkButton6" runat="server" OnClick="LinkButton6_Click">Edit Election</asp:LinkButton>
+                             &nbsp;
+                            <asp:LinkButton class="footerlinks" ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">ADD Candidate</asp:LinkButton>
+                             &nbsp;
+                            <asp:LinkButton class="footerlinks" ID="LinkButton3" runat="server" OnClick="LinkButton3_Click">ADD Election</asp:LinkButton>
+                             &nbsp;
+                            <asp:LinkButton class="footerlinks" ID="LinkButton4" runat="server" OnClick="LinkButton4_Click">Admin Login</asp:LinkButton>
+                            &nbsp;
+                            <asp:LinkButton class="footerlinks" ID="LinkButton5" runat="server" OnClick="LinkButton5_Click">Election</asp:LinkButton>
+                            &nbsp;
+                            &nbsp;
+                            <asp:LinkButton class="footerlinks" ID="LinkButton8" runat="server" OnClick="LinkButton8_Click">Voting</asp:LinkButton>
+                            &nbsp;
+                            <asp:LinkButton class="footerlinks" ID="LinkButton9" runat="server" OnClick="LinkButton9_Click">Results</asp:LinkButton>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="footer2" class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                        <p style="color: whitesmoke">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&copy All right Reversed. <a class="footerlinks" href="#" target="_blank">Manish pawar</a></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </form>
+</body>
+</html>
